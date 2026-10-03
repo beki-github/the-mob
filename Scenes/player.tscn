@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cqqiyl7cxwi8f"]
+
+[ext_resource type="Script" uid="uid://bdwxgdukdwo7t" path="res://script/player.gd" id="1_cvnsp"]
+[ext_resource type="PackedScene" uid="uid://d0ypm0v45pwdv" path="res://art/player.glb" id="1_v0iea"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ftie8"]
+radius = 1.1273136
+
+[node name="player" type="CharacterBody3D" unique_id=1836740431]
+script = ExtResource("1_cvnsp")
+
+[node name="Pivot" type="Node3D" parent="." unique_id=540801441]
+
+[node name="charachter" parent="Pivot" unique_id=1507752776 instance=ExtResource("1_v0iea")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=980634824]
+shape = SubResource("SphereShape3D_ftie8")
+debug_color = Color(0.75686276, 0.45490196, 0.003921569, 0.9647059)
