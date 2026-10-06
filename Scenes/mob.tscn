@@ -7,6 +7,8 @@
 size = Vector3(2.074707, 1.0913086, 2.28656)
 
 [node name="mob" type="CharacterBody3D" unique_id=1644144265]
+collision_layer = 2
+collision_mask = 0
 script = ExtResource("1_u8nqw")
 
 [node name="Pivot" type="Node3D" parent="." unique_id=910569384]
@@ -19,3 +21,5 @@ shape = SubResource("BoxShape3D_ftie8")
 
 [node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="." unique_id=491384933]
 aabb = AABB(-1, -1, -1.9061351, 2, 2, 3.8122702)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier3D" to="." method="_on_visible_on_screen_notifier_3d_screen_exited"]
